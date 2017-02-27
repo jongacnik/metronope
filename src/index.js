@@ -149,7 +149,7 @@ function view (state, prev, send) {
   }
 }
 
-app.router({ default: '/' }, [ '/', view ])
+app.router({ default: '/' }, [ '/:any', view ])
 
 var tree = app.start()
 document.body.appendChild(tree)
