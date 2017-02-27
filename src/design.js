@@ -61,5 +61,13 @@ var custom = `
   }
 `
 
-var cssString = recsst.toString() + css.toString() + custom
-process.stdout.write(cssString)
+if (typeof window === 'undefined') {
+  var cssString = recsst.toString() + css.toString() + custom
+  process.stdout.write(cssString)
+} else {
+  recsst.attach()
+  css.attach()
+  var customEl = document.createElement('style')
+  customEl.innerHTML = custom
+  document.head.appendChild(customEl)
+}

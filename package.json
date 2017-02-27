@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "css": "node src/design.js | lilcss -f src/index.js | postcss --use autoprefixer --use postcss-clean > bundle.css",
-    "js": "browserify src/index.js -g es2020 -g uglifyify > bundle.js",
+    "js": "NODE_ENV=production browserify src/index.js -t envify -g yo-yoify -g es2020 -g uglifyify > bundle.js",
     "start": "budo src/index.js:bundle.js -l -P"
   },
-  "keywords": ["metronome"],
+  "keywords": [
+    "metronome"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
@@ -20,9 +22,11 @@
     "autoprefixer": "^6.7.5",
     "browserify": "^14.1.0",
     "budo": "^9.4.7",
+    "envify": "^4.0.0",
     "es2020": "^1.1.9",
     "postcss-clean": "^1.0.2",
     "postcss-cli": "^2.6.0",
-    "uglifyify": "^3.0.4"
+    "uglifyify": "^3.0.4",
+    "yo-yoify": "^3.5.0"
   }
 }

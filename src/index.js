@@ -2,6 +2,11 @@ var html = require('choo/html')
 var choo = require('choo')
 var app = choo()
 
+// include design if dev
+if (process.env.NODE_ENV !== 'production') {
+  var design = require('./design')
+}
+
 var metronome = require('./metronome')
 
 var context = new (window.AudioContext || window.webkitAudioContext)()
