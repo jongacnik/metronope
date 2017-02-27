@@ -149,7 +149,7 @@ function view (state, prev, send) {
   }
 }
 
-app.router([ '/metronope', view ])
+app.router({ default: '/' }, [ '/', view ])
 
 var tree = app.start()
 document.body.appendChild(tree)
