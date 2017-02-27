@@ -1,8 +1,8 @@
 # Metronope
 
-Sort of a metronome. I use this when practicing touch-typing.
+Sort of a metronome. Used for touch-typing practice.
 
-[**Launch**](metronope.github.io)
+[**Launch**](https://jongacnik.github.io/metronope/)
 
 **In progress, but will likely make no further progress ☻**
 
